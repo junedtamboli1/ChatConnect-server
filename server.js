@@ -3,7 +3,7 @@ const path = require("path");
 
 const app =  express();
 const server = require("http").createServer(app);
-const port = process.env.PORT || 8000 ;
+
 
 const io = require("socket.io")(server);
 
@@ -23,7 +23,4 @@ io.on("connection", function(socket){
 
 });
 
-server.listen(port,()=>{
-
-    console.log("server listening at port 8000");
-});
+server.listen(5000);
